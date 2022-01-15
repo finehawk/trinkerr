@@ -11,8 +11,8 @@ if(str1.length >= str2.length) {
     smallerString = str2;
     largerString = str1
 } else {
-    largerString = str1;
-    smallerString = str2;
+    largerString = str2;
+    smallerString = str1;
 }
 let addOne = false
 let result = "";
@@ -32,6 +32,9 @@ for(let i = smallerString.length-1; i>=0; i--) {
     }
     if(i == 0 && addOne ==true) result += "1";
     j--;
+     if(largerString.length > smallerString.length && i == 0) {
+        result += largerString.substring(0,largerString.length-smallerString.length);
+    }
 }
 
 let reverseResult = ""
